@@ -277,7 +277,8 @@ CDB::CDB(const char *pszFile, const char* pszMode) :
                 pdb = NULL;
                 --bitdb.mapFileUseCount[strFile];
                 strFile = "";
-                throw runtime_error(strprintf("CDB() : can't open database file %s, error %d", pszFile, ret));
+	      //  remove  exception whenver load the databse when it not existed in the first time.
+              //  throw runtime_error(strprintf("CDB() : can't open database file %s, error %d", pszFile, ret));
             }
 
             if (fCreate && !Exists(string("version")))
