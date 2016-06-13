@@ -81,7 +81,7 @@ contains(USE_UPNP, -) {
         win32:LIBS += -liphlpapi
 }
 
-// IPC protcol support, # qmake "USE_IPV6=-" "USE_UPNP=-" "USE_DBUS=1"
+#// IPC protcol support, # qmake "USE_IPV6=-" "USE_UPNP=-" "USE_DBUS=1"
 # use: qmake "USE_DBUS=1"
 contains(USE_DBUS, 1) {
         message(Building with DBUS (Freedesktop notifications) support)
