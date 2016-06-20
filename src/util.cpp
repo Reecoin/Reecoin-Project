@@ -1087,7 +1087,7 @@ boost::filesystem::path GetConfigFile()
        fprintf(fileconff, "rpcpassword=pass\n");
             fprintf(fileconff, "server=1\n");
             fprintf(fileconff, "rpcallowip=127.0.0.1\n");
-            fprintf(fileconff, "rpcport=11939\n");
+            fprintf(fileconff, "rpcport=11627\n");
 
    }
     //    return;
