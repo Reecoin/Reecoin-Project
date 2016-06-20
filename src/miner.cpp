@@ -162,8 +162,7 @@ CBlock* CreateNewBlock(CWallet* pwallet, bool fProofOfStake, int64_t* pFees)
     int64_t nMinTxFee = MIN_TX_FEE;
     if (mapArgs.count("-mintxfee"))
         ParseMoney(mapArgs["-mintxfee"], nMinTxFee);
-
-    pblock->nBits = GetNextTargetRequired(pindexPrev, fProofOfStake);
+     pblock->nBits = GetNextTargetRequired(pindexPrev, fProofOfStake, pblock.get());
 
     // Collect memory pool transactions into the block
     int64_t nFees = 0;
