@@ -1202,12 +1202,12 @@ unsigned int static DarkGravityWave3(const CBlockIndex* pindexLast, const CBlock
 
 unsigned int GetNextTargetRequired(const CBlockIndex* pindexLast, bool fProofOfStake,const CBlock *pblock)
 {
-    if ((pindexLast->nHeight < 10000))
-            {return GetNextTargetRequiredV1(pindexLast, fProofOfStake);}
-       else if ((pindexLast->nHeight < 44000))
-      { return GetNextTargetRequiredV2(pindexLast, fProofOfStake);}
-        else {return DarkGravityWave3(pindexLast,pblock);}
-
+         if ((pindexLast->nHeight < 10000))
+         {return GetNextTargetRequiredV1(pindexLast, fProofOfStake);}
+        else if ((  pindexLast->nHeight <= 43825))
+              { return GetNextTargetRequiredV2(pindexLast, fProofOfStake);}
+         else
+         { return DarkGravityWave3(pindexLast,pblock);}
 }
 
 
