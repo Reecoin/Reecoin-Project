@@ -63,7 +63,8 @@ extern std::set<std::pair<COutPoint, unsigned int> > setStakeSeen;
 extern CBlockIndex* pindexGenesisBlock;
 extern unsigned int nStakeMinAge;
 extern unsigned int nNodeLifespan;
-extern int nCoinbaseMaturity;
+//extern int nCoinbaseMaturity;
+
 extern int nBestHeight;
 extern uint256 nBestChainTrust;
 extern uint256 nBestInvalidTrust;
@@ -95,7 +96,7 @@ static const uint64_t nMinDiskSpace = 52428800;
 class CReserveKey;
 class CTxDB;
 class CTxIndex;
-
+int nCoinbaseMaturity();
 void RegisterWallet(CWallet* pwalletIn);
 void UnregisterWallet(CWallet* pwalletIn);
 void SyncWithWallets(const CTransaction& tx, const CBlock* pblock = NULL, bool fUpdate = false, bool fConnect = true);
